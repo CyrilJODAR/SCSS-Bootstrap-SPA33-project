@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    overflow: hidden;
+    box-shadow: 0px 12px 2px 1px rgba(194, 194, 194, 0.2);
+    img{
+        height: 120px;
+    }
+    .navSPA{
+        width: 100%;
+        ul{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            li{
+                position: relative;
+                &:first-child {
+                    margin-right: auto;
+                }
+                &:not(:first-child)::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 2px;
+                    width: 0%;
+                    background-color: red;
+                    margin: 5px auto;
+                    transition: all 0.2s ease-in-out;
+                }
+    
+                &:hover::after {
+                    width: 100%;
+                }
+                a{
+                    font-size: 1.2rem;
+                    
+                }
+            }
+        }
+    }
+    .navSPA .icon{
+        display: none;
+    }
+}

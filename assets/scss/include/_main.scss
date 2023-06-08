@@ -1,0 +1,43 @@
+main {
+    .sectionAdoption {        
+        margin-top: 50px;
+        h1 {
+            @include afterUnderline;
+        }
+        div{
+            margin-top: 30px;
+            gap: 20px;
+            .adoptDog1{
+                background-image: url('../img/chiens-adoption-spa.jpg');
+                @include buttonAdopDog;
+            }
+            .adoptDog2{
+                background-image: url('../img/chats-adoption-spa.jpg');
+                @include buttonAdopDog;
+            }
+        }
+    }
+    .sectionCardPossi{
+        margin: 150px auto;
+        div{
+            div{
+                h3{
+                    margin-top: 15px;
+                }
+                img{
+                    width: 180px;
+                }
+            }
+        }
+    }
+    .sectionCarousel{
+        padding-top: 50px;
+        background-color: $colorOptional2;
+        h2{
+            margin-bottom: 50px;
+            @include afterUnderline;
+
+        }
+        //CAROUSEL DANS COMPONENT SCSS
+    }
+}

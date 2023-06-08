@@ -1,0 +1,31 @@
+.mySwiper{
+    .dogKila, .dogSeiba, .dogNouma, .dogMarquis{
+        overflow: hidden;
+        position: relative;
+        div{
+            top: 95%;
+            padding: 10px 0 10px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            color: black;
+            left: 50%;
+            width: 50%;
+            background-color: white;
+            border-radius: 5px;
+            ul{
+                display: none;
+                font-size: 1rem;
+                width: 100%;
+                text-align: start;
+                padding-top: 10px;
+            }
+            &:hover ul{
+                display: block;
+            }
+            &:hover{
+                top: 85%;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

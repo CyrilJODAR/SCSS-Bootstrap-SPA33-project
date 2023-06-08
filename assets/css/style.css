@@ -1,0 +1,265 @@
+.mySwiper .dogKila, .mySwiper .dogSeiba, .mySwiper .dogNouma, .mySwiper .dogMarquis {
+  overflow: hidden;
+  position: relative;
+}
+.mySwiper .dogKila div, .mySwiper .dogSeiba div, .mySwiper .dogNouma div, .mySwiper .dogMarquis div {
+  top: 95%;
+  padding: 10px 0 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: black;
+  left: 50%;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+}
+.mySwiper .dogKila div ul, .mySwiper .dogSeiba div ul, .mySwiper .dogNouma div ul, .mySwiper .dogMarquis div ul {
+  display: none;
+  font-size: 1rem;
+  width: 100%;
+  text-align: start;
+  padding-top: 10px;
+}
+.mySwiper .dogKila div:hover ul, .mySwiper .dogSeiba div:hover ul, .mySwiper .dogNouma div:hover ul, .mySwiper .dogMarquis div:hover ul {
+  display: block;
+}
+.mySwiper .dogKila div:hover, .mySwiper .dogSeiba div:hover, .mySwiper .dogNouma div:hover, .mySwiper .dogMarquis div:hover {
+  top: 85%;
+  transition: all 0.2s ease-in-out;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  overflow: hidden;
+  box-shadow: 0px 12px 2px 1px rgba(194, 194, 194, 0.2);
+}
+header img {
+  height: 120px;
+}
+header .navSPA {
+  width: 100%;
+}
+header .navSPA ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header .navSPA ul li {
+  position: relative;
+}
+header .navSPA ul li:first-child {
+  margin-right: auto;
+}
+header .navSPA ul li:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: red;
+  margin: 5px auto;
+  transition: all 0.2s ease-in-out;
+}
+header .navSPA ul li:hover::after {
+  width: 100%;
+}
+header .navSPA ul li a {
+  font-size: 1.2rem;
+}
+header .navSPA .icon {
+  display: none;
+}
+
+main .sectionAdoption {
+  margin-top: 50px;
+}
+main .sectionAdoption h1 {
+  display: inline-block;
+}
+main .sectionAdoption h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 15%;
+  background-color: red;
+  margin: 10px auto;
+  transition: all 0.5s ease-in-out;
+}
+main .sectionAdoption h1:hover::after {
+  width: 100%;
+}
+main .sectionAdoption div {
+  margin-top: 30px;
+  gap: 20px;
+}
+main .sectionAdoption div .adoptDog1 {
+  background-image: url("../img/chiens-adoption-spa.jpg");
+  background-position: start;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+}
+main .sectionAdoption div .adoptDog1 a {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -20px;
+  padding: 20px 20px;
+  background-color: #22234F;
+  color: white;
+}
+main .sectionAdoption div .adoptDog2 {
+  background-image: url("../img/chats-adoption-spa.jpg");
+  background-position: start;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+}
+main .sectionAdoption div .adoptDog2 a {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -20px;
+  padding: 20px 20px;
+  background-color: #22234F;
+  color: white;
+}
+main .sectionCardPossi {
+  margin: 150px auto;
+}
+main .sectionCardPossi div div h3 {
+  margin-top: 15px;
+}
+main .sectionCardPossi div div img {
+  width: 180px;
+}
+main .sectionCarousel {
+  padding-top: 50px;
+  background-color: #EAF0FF;
+}
+main .sectionCarousel h2 {
+  margin-bottom: 50px;
+  display: inline-block;
+}
+main .sectionCarousel h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 15%;
+  background-color: red;
+  margin: 10px auto;
+  transition: all 0.5s ease-in-out;
+}
+main .sectionCarousel h2:hover::after {
+  width: 100%;
+}
+
+footer {
+  height: 40vh;
+  position: relative;
+  margin-top: 150px;
+  background-color: #EAF0FF;
+  color: white;
+}
+footer p i {
+  padding: 7px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  color: #EF4D55;
+  border-radius: 100%;
+  margin-right: 7px;
+}
+footer p a {
+  color: white;
+}
+footer .footerContent {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  bottom: 200px;
+  background-color: #22234F;
+}
+footer .footerContent img {
+  background-color: white;
+  margin-bottom: 50px;
+}
+footer .footerContent div {
+  margin-bottom: 15px;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+footer .footerContent div div > a > i {
+  padding: 7px;
+  background-color: #22234F;
+  width: 30px;
+  height: 30px;
+  color: #EF4D55;
+  border-radius: 100%;
+  margin-right: 7px;
+}
+
+@media screen and (max-width: 992) {
+  main .sectionAdoption .animauxAdopt {
+    flex-direction: column !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navSPA.navStyleResponsive ul {
+    flex-direction: column;
+  }
+  .navSPA.navStyleResponsive .icon {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+  .navSPA.navStyleResponsive li {
+    display: block;
+    text-align: left;
+  }
+  .navSPA li:not(:first-child) {
+    display: none;
+  }
+  .navSPA a.icon {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    display: block;
+  }
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+.btnStyle {
+  padding: 10px 25px;
+  background-color: white;
+}
+
+body {
+  font-family: "roboto-regular";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #22234F;
+}
+a:visited a {
+  color: #22234F;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #22234F;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

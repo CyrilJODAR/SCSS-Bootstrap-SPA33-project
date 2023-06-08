@@ -1,0 +1,36 @@
+@import "abstract/variables";
+@import 'mixin/mixin';
+@import "component/carousel";
+@import "include/header";
+@import "include/main";
+@import "include/footer";
+@import "mediaQ/mediaQ";
+
+@font-face {
+    font-family: $fontRobotoRegular;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+.btnStyle{
+    @include button($color2);
+}
+body{
+    font-family: $fontRobotoRegular;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $colorSecondary;
+    &:visited a{
+        color: $colorSecondary;
+    }
+}
+h1{
+    font-size: 2rem;
+    color: $colorSecondary;
+}
+h3{
+    font-size: 1.2rem;
+}
