@@ -41,3 +41,28 @@ main {
         //CAROUSEL DANS COMPONENT SCSS
     }
 }
+
+
+
+
+// MEDIA
+@media screen and (max-width: 992px) {
+    main{
+        .sectionAdoption{
+            div{
+                flex-direction: column;
+                .adoptDog1, .adoptDog2{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .sectionCardPossi{
+        div{
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

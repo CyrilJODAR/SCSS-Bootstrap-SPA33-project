@@ -1,8 +1,8 @@
 function myFunction() {
     var x = document.getElementById("navSPA");
     if (x.className === "navSPA") {
-      x.className += " navStyleResponsive";
+      x.classList.add("navStyleResponsive");
     } else {
-      x.className = "navSPA";
+      x.classList.remove("navStyleResponsive");
     }
   }

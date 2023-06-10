@@ -27,7 +27,15 @@
   top: 85%;
   transition: all 0.2s ease-in-out;
 }
+.mySwiper .swiper-button-next, .mySwiper .swiper-button-prev {
+  display: none;
+}
 
+@media screen and (max-width: 768px) {
+  .mySwiper .swiper-button-next, .mySwiper .swiper-button-prev {
+    display: inline-block;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -73,6 +81,31 @@ header .navSPA .icon {
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .navSPA.navStyleResponsive ul {
+    flex-direction: column;
+  }
+  .navSPA.navStyleResponsive .icon {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+  .navSPA.navStyleResponsive li:not(:first-child) {
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navSPA li:not(:first-child) {
+    display: none;
+  }
+  .navSPA a.icon {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    display: block;
+  }
+}
 main .sectionAdoption {
   margin-top: 50px;
 }
@@ -155,6 +188,20 @@ main .sectionCarousel h2:hover::after {
   width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  main .sectionAdoption div {
+    flex-direction: column;
+  }
+  main .sectionAdoption div .adoptDog1, main .sectionAdoption div .adoptDog2 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sectionCardPossi div {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 footer {
   height: 40vh;
   position: relative;
@@ -176,9 +223,11 @@ footer p a {
 }
 footer .footerContent {
   position: absolute;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 0%);
   left: 50%;
-  bottom: 200px;
+  top: -40px;
+  width: 80%;
+  height: 80%;
   background-color: #22234F;
 }
 footer .footerContent img {
@@ -200,32 +249,22 @@ footer .footerContent div div > a > i {
   margin-right: 7px;
 }
 
-@media screen and (max-width: 992) {
-  main .sectionAdoption .animauxAdopt {
-    flex-direction: column !important;
-  }
-}
 @media screen and (max-width: 768px) {
-  .navSPA.navStyleResponsive ul {
+  footer {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+  footer .footerContent {
+    width: 100%;
+    height: auto;
+    top: 0px;
+    --bs-gutter-x: 0;
+    margin-left: 0;
+  }
+  footer .footerContent div {
     flex-direction: column;
-  }
-  .navSPA.navStyleResponsive .icon {
-    position: absolute;
-    right: 40px;
-    top: 40px;
-  }
-  .navSPA.navStyleResponsive li {
-    display: block;
-    text-align: left;
-  }
-  .navSPA li:not(:first-child) {
-    display: none;
-  }
-  .navSPA a.icon {
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    display: block;
+    align-items: center;
+    text-align: center;
   }
 }
 @font-face {

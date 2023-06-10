@@ -14,9 +14,11 @@ footer{
     }
     .footerContent{
         position: absolute;
-        transform: translate(-50%,50%);
+        transform: translate(-50%,0%);
         left: 50%;
-        bottom: 200px;
+        top: -40px;
+        width: 80%;
+        height: 80%;
         background-color: $colorSecondary;
         img{
             background-color: $colorPrimary;
@@ -30,6 +32,25 @@ footer{
                 @include iCons($paddingIcon,$colorSecondary);
             }
             padding: 0 2%;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    footer{
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
+        .footerContent{
+            width: 100%;
+            height: auto;
+            top: 0px;
+            --bs-gutter-x: 0;
+            margin-left: 0;
+            div{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
     }
 }
